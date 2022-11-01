@@ -1,5 +1,5 @@
 import { StyleSheet, css } from "aphrodite";
-import { buttonStyle, textStyle } from '../styles/appStyle';
+import { textStyle } from '../styles/appStyle';
 import img from './about_bg.png'
 import { images } from "../assets/image";
 

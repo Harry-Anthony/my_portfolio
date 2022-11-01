@@ -1,7 +1,6 @@
 import { css } from "aphrodite"
 import classNames from "classnames"
 import { buttonStyle, textStyle } from "../styles/appStyle"
-import { Phone } from "./sharedComponents/Phone";
 
 export function Contact() {
     const mailIcon = (
