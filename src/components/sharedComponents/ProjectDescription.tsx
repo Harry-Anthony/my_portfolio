@@ -1,0 +1,22 @@
+type ProjectProps = {
+    name: string;
+    description: string;
+    githubLinhk: string;
+    appLink: string;
+    children: JSX.Element | JSX.Element[]
+};
+function ProjectDescription({name, description, githubLinhk, appLink, children}: ProjectProps){
+  return (
+    <div className="w-[400px] ">
+      <h5 className='text-[#ffaf23] text-[20px] my-[8px]'>{name}</h5>
+      <div>
+        <p className='text-[white]'>{description}</p>
+      </div>
+      <div className="flex flex-col">
+        {children}
+      </div>
+    </div>
+  )
+}
+
+export default ProjectDescription
