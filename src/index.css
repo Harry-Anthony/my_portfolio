@@ -187,3 +187,12 @@ code {
   height: 100%;
   z-index: -1;
 }
+
+.project-card {
+	background-color: rgba(245, 245, 245, 0.44);
+	border-radius: 12px;
+	box-shadow: 2px 5px 30px rgba(179, 186, 204, 0.4);
+  max-width: 900px;
+  width: 900px;
+}
+

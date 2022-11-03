@@ -3,10 +3,10 @@ import { textStyle } from '../styles/appStyle';
 import img from './about_bg.png'
 import { images } from "../assets/image";
 
-const ItemFormation = ({diplome, date, school, lieu}: {diplome: string, date: string, school: string, lieu: string}) => {
+const ItemFormation = ({ diplome, date, school, lieu }: { diplome: string, date: string, school: string, lieu: string }) => {
     return (
-        <div className="flex items-start bg-[#ffffff29] my-[10px] p-[8px]">
-            <img className="w-[45px] mr-[10px]" src={images.degree} alt=""  />
+        <div className="flex items-start bg-[#ffffff29] mx-[10px] max-w-[300px] px-[8px] py-[50px]">
+            <img className="w-[45px] mr-[10px]" src={images.degree} alt="" />
             <div>
                 <h4 className="text-[#ffaf23] mb-[10px] text-[23px]">{diplome}</h4>
                 <h5 className="text-[#e1cc8acc] mb-[10px]">{school}</h5>
@@ -21,23 +21,23 @@ export function About() {
     return (
         <div id="about" className="about relative flex sm:px-6 sm:flex-col-reverse sm:items-center sm:py-[100px] lg:flex-row bg-[#252735] text-white lg:py-[300px] justify-center">
             <img className="about-bg" src={img} alt="" />
-            <div className="block">
-                <div className="mb-[50px]">
-                <span className={css(textStyle.yellow_title, textStyle.h2)}>01. </span>
-                <span className={css(textStyle.h2)}>About Me</span>
-                <p className={css(textStyle.paragraph, aboutStyles.p)}>
-                My name is Harivola, I started developing web and mobile applications since 2019.
-                I like the challenge, I always look for it to build my character and increase my skills.
-                </p>
+            <div className="flex flex-col items-center">
+                <div className="mb-[50px] text-center mb-[50px]">
+                    <span className={css(textStyle.yellow_title, textStyle.h2)}>01. </span>
+                    <span className={css(textStyle.h2)}>About Me</span>
+                    <p className={css(textStyle.paragraph, aboutStyles.p)}>
+                        My name is Harivola, I started developing web and mobile applications since 2019.
+                        I like the challenge, I always look for it to build my character and increase my skills.
+                    </p>
                 </div>
                 <span className={css(textStyle.h2)}>University degrees</span>
-                <div>
-                    <ItemFormation diplome={"LICENCE I"} date={"2018-2019"} school={"Mathématiques et Informatique"} lieu={"Université d'Antananarivo"} />
+                <div className="flex my-[50px]">
+                    {/* <ItemFormation diplome={"LICENCE I"} date={"2018-2019"} school={"Mathématiques et Informatique"} lieu={"Université d'Antananarivo"} /> */}
                     <ItemFormation diplome={"LICENCE II"} date={"2019-2020"} school={"Mathématiques et Informatique"} lieu={"Université d'Antananarivo"} />
                     <ItemFormation diplome={"LICENCE III"} date={"2020-2021"} school={"Mathématiques Informatique et Statistiques Appliquées"} lieu={"Université d'Antananarivo"} />
                     <ItemFormation diplome={"MASTER I"} date={"2021-2022"} school={"Mathématiques Informatique et Statistiques Appliquées"} lieu={"Université d'Antananarivo"} />
                 </div>
-                <p className={css(textStyle.paragraph, aboutStyles.p)}>
+                <p className={"text-[20px]"}>
                     Here are a few technologies I’ve been working with recently:
                 </p>
                 <div className={css(aboutStyles.techno_container)}>

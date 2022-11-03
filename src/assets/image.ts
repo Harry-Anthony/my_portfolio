@@ -6,5 +6,7 @@ export const images = {
     "socketIO": require('./socket_io.png'),
     "redux": require('./redux.png'),
     "css": require('./css.png'),
-    "degree": require('./certificate.png')
+    "degree": require('./certificate.png'),
+    "bgProject": require('./bg_project.jpg'),
+    "linkIcon": require('./link_icon.png')
 }

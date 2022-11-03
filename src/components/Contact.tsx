@@ -21,7 +21,7 @@ export function Contact() {
         </svg>
     )
     return (
-        <div id="contact" className="flex flex-col w-full items-center pb-[100px] bg-[#252735]">
+        <div id="contact" className="flex flex-col w-full items-center py-[100px] bg-[#252735]">
             <div>
                 <span className={css(textStyle.yellow_title, textStyle.h2)}>03. </span>
                 <span className="text-4xl text-white">Contact</span>
