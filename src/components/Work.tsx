@@ -5,15 +5,17 @@ import { images } from '../assets/image';
 import { css } from 'aphrodite';
 import { textStyle } from '../styles/appStyle';
 
-const VisitButton = ({ title, onPressed }: { title: string, onPressed: () => void }) => {
+const VisitButton = ({ title, onPressed, link }: { title: string, onPressed: () => void, link: string }) => {
     return (
         <div
-            className='flex items-center cursor-pointer border border-black rounded-[12px] p-[8px] hover:bg-[#e7e4e4]'
+            className='cursor-pointer border border-black rounded-[12px] p-[8px] hover:bg-[#e7e4e4]'
             onClick={onPressed}
         // className='border border-indigo-500 w-[100px] rounded-[12px] py-[8px] text-center text-[black] text-[20px] cursor-pointer'
         >
-            <img className="w-[30px] mr-[10px]" src={images.linkIcon} alt="" />
-            <span>{title}</span>
+            <a className='flex items-center ' href="https://63641cd7d0f63d116efdabee--thriving-piroshki-b28191.netlify.app/">
+                <img className="w-[30px] mr-[10px]" src={images.linkIcon} alt="" />
+                <span>{title}</span>
+            </a>
         </div>
     )
 }
@@ -43,6 +45,7 @@ export function Work() {
                     </div>
                     <div className='flex justify-end'>
                         <VisitButton
+                            link='https://chat-bol.herokuapp.com'
                             title='see project'
                             onPressed={() => {
 
@@ -53,7 +56,7 @@ export function Work() {
             </div>
             <div className="project-card flex flex-row mb-[100px] bg-[white] p-[40px] items-center justify-center">
                 <ProjectDescription
-                    name={"Chat Application"}
+                    name={"Landing page"}
                     description={`this Landig page is built with Gatsby which a static site generator and react framework, using css module for styling.`}
                     githubLinhk={""}
                     appLink={"https://github.com/Harry-Anthony"}
@@ -66,12 +69,13 @@ export function Work() {
                         <img className='w-[30px] mr-[10px]' src={images.css} alt="" />
                     </div>
                     <div className='flex'>
-                    <VisitButton
-                        title='see project'
-                        onPressed={() => {
+                        <VisitButton
+                            link='https://63641cd7d0f63d116efdabee--thriving-piroshki-b28191.netlify.app/'
+                            title='see project'
+                            onPressed={() => {
 
-                        }}
-                    />
+                            }}
+                        />
                     </div>
                 </ProjectDescription>
                 <img className="ml-[30px] w-[300px]" src={saasImage} alt="" />
