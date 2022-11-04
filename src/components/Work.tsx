@@ -12,7 +12,7 @@ const VisitButton = ({ title, onPressed, link }: { title: string, onPressed: () 
             onClick={onPressed}
         // className='border border-indigo-500 w-[100px] rounded-[12px] py-[8px] text-center text-[black] text-[20px] cursor-pointer'
         >
-            <a className='flex items-center ' href="https://63641cd7d0f63d116efdabee--thriving-piroshki-b28191.netlify.app/">
+            <a className='flex items-center ' href={link}>
                 <img className="w-[30px] mr-[10px]" src={images.linkIcon} alt="" />
                 <span>{title}</span>
             </a>
