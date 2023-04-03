@@ -5,7 +5,7 @@ import { images } from "../assets/image";
 
 const ItemFormation = ({ diplome, date, school, lieu }: { diplome: string, date: string, school: string, lieu: string }) => {
     return (
-        <div className="flex items-start bg-[#ffffff29] mx-[10px] max-w-[300px] px-[8px] py-[50px]">
+        <div className="flex items-start bg-[#ffffff29] mx-[10px] sm:my-[10px] md:my-[10px]  max-w-[300px] px-[8px] py-[50px]">
             <img className="w-[45px] mr-[10px]" src={images.degree} alt="" />
             <div>
                 <h4 className="text-[#ffaf23] mb-[10px] text-[23px]">{diplome}</h4>
@@ -31,7 +31,7 @@ export function About() {
                     </p>
                 </div>
                 <span className={css(textStyle.h2)}>University degrees</span>
-                <div className="flex my-[50px]">
+                <div className="flex my-[50px] md:flex-row lg:flex-row sm:flex-col">
                     {/* <ItemFormation diplome={"LICENCE I"} date={"2018-2019"} school={"Mathématiques et Informatique"} lieu={"Université d'Antananarivo"} /> */}
                     <ItemFormation diplome={"LICENCE II"} date={"2019-2020"} school={"Mathématiques et Informatique"} lieu={"Université d'Antananarivo"} />
                     <ItemFormation diplome={"LICENCE III"} date={"2020-2021"} school={"Mathématiques Informatique et Statistiques Appliquées"} lieu={"Université d'Antananarivo"} />

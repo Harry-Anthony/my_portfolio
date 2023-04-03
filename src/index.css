@@ -195,4 +195,14 @@ code {
   max-width: 900px;
   width: 900px;
 }
+.visit-button {
+  transition: background-color 1s;
+}
 
+.menu-item {
+  transition: color 0.3s;
+}
+
+.menu-item:hover {
+  color: #915d0b;
+}

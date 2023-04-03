@@ -8,7 +8,7 @@ import { textStyle } from '../styles/appStyle';
 const VisitButton = ({ title, onPressed, link }: { title: string, onPressed: () => void, link: string }) => {
     return (
         <div
-            className='cursor-pointer border border-black rounded-[12px] p-[8px] hover:bg-[#e7e4e4]'
+            className='cursor-pointer visit-button border border-black rounded-[12px] p-[8px] hover:bg-[#c5c2c2]'
             onClick={onPressed}
         // className='border border-indigo-500 w-[100px] rounded-[12px] py-[8px] text-center text-[black] text-[20px] cursor-pointer'
         >
@@ -27,8 +27,7 @@ export function Work() {
                 <span className={css(textStyle.yellow_title, textStyle.h2)}>02. </span>
                 <span className="text-4xl text-black">My Project</span>
             </div>
-            <div className="project-card flex flex-row my-[100px] bg-[white] p-[40px] items-center justify-center">
-                <img className="mr-[100px] w-[300px] mr-[30px]" src={chatImage} alt="" />
+            <div className="project-card flex lg:flex-row md:flex-row sm:flex-col-reverse my-[100px] bg-[white] p-[40px] items-center justify-center">
                 <ProjectDescription
                     name={"Chat Application"}
                     description={`Here is a Messenger application that I build with react for the front part and nodejs, express socket-io for the api. The user can create an account, arriving on the home page he can search for one to start a discussion. All messages are stored on the database, and there is a paging system to retrieve old messages`}
@@ -53,8 +52,9 @@ export function Work() {
                         />
                     </div>
                 </ProjectDescription>
+                <img className="mr-[100px] w-[300px] mr-[30px]" src={chatImage} alt="" />
             </div>
-            <div className="project-card flex flex-row mb-[100px] bg-[white] p-[40px] items-center justify-center">
+            <div className="project-card flex lg:flex-row md:flex-row sm:flex-col-reverse  mb-[100px] bg-[white] p-[40px] items-center justify-center">
                 <ProjectDescription
                     name={"Landing page"}
                     description={`this Landig page is built with Gatsby which a static site generator and react framework, using css module for styling.`}
@@ -78,7 +78,7 @@ export function Work() {
                         />
                     </div>
                 </ProjectDescription>
-                <img className="ml-[30px] w-[300px]" src={saasImage} alt="" />
+                <img className="ml-[30px] w-[300px] mb-[20px]" src={saasImage} alt="" />
             </div>
         </div>
     )

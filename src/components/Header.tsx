@@ -26,10 +26,10 @@ export function Header() {
                         </div>
                         <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
                             <ul className={css(styles.nav)}>
-                                <li className={css(styles.li)}><a className="text-[#cba05b] t-shadow" href='#about'><span className={css(styles.link_number)}>01. </span>About</a></li>
+                                <li className={css(styles.li)}><a className="text-[#cba05b] menu-item t-shadow" href='#about'><span className={css(styles.link_number)}>01. </span>About</a></li>
                                 {/* <li className={css(styles.li)}><a className="text-[#cba05b] t-shadow" href='#exp'><span className={css(styles.link_number)}>02. </span>Experience</a></li> */}
-                                <li className={css(styles.li)}><a className="text-[#cba05b] t-shadow" href='#work'><span className={css(styles.link_number)}>02. </span>Project</a></li>
-                                <li className={css(styles.li)}><a className="text-[#cba05b] t-shadow" href='#contact'><span className={css(styles.link_number)}>03. </span>Contact</a></li>
+                                <li className={css(styles.li)}><a className="text-[#cba05b] menu-item  t-shadow" href='#work'><span className={css(styles.link_number)}>02. </span>Project</a></li>
+                                <li className={css(styles.li)}><a className="text-[#cba05b] menu-item  t-shadow" href='#contact'><span className={css(styles.link_number)}>03. </span>Contact</a></li>
                             </ul>
                         </div>
                     </nav>
