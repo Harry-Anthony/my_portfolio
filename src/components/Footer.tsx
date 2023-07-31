@@ -1,9 +1,3 @@
-
-
 export function Footer() {
-    return (
-        <div>
-            Footer work
-        </div>
-    )
+  return <div>Footer work</div>;
 }
