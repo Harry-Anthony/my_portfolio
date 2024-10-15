@@ -1,8 +1,34 @@
 import { css } from "aphrodite";
 import classNames from "classnames";
 import { buttonStyle, textStyle } from "../styles/appStyle";
+import { useCallback, useState } from "react";
+import axios from "axios";
+const initialState = {
+  name: "",
+  mail: "",
+  text: "",
+};
+export const Contact = () => {
+  const [formData, setFormData] = useState<any>(initialState);
+  const sendMail = async () => {
+    try {
+      await axios.post("https://chat-back-2928.onrender.com/chat-harivola/mail", formData);
+      setFormData(initialState);
+    } catch (error) {
+      alert("unable to send message");
+    }
+  };
+  const handleChange = (event: any) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData: any) => ({ ...prevFormData, [name]: value }));
+  };
 
-export function Contact() {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (formData.text.length >= 5) {
+      sendMail();
+    }
+  };
   const mailIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -48,29 +74,52 @@ export function Contact() {
         <span className={css(textStyle.yellow_title, textStyle.h2)}>03. </span>
         <span className="text-4xl text-white">Contact</span>
       </div>
-      <div className="w-[500px] flex flex-col mt-[20px]">
-        <ContactForm icon={userIcon} width="w-full" height="" title="Name" />
-        <ContactForm icon={mailIcon} width="w-full" height="" title="Email" />
-        <div className="flex flex-col items-start w-full">
-          <div className="flex">
-            {messageIcon}
-            <span className="block ml-[8px] text-white">Message</span>
+      <div className="form lg:w-[500px] sm:w-[350px] flex flex-col mt-[20px]">
+        <form onSubmit={handleSubmit}>
+          <ContactForm
+            onChange={handleChange}
+            name="name"
+            icon={userIcon}
+            width="w-full"
+            height=""
+            title="Name"
+            value={formData.name}
+          />
+          <ContactForm
+            onChange={handleChange}
+            name="mail"
+            icon={mailIcon}
+            width="w-full"
+            height=""
+            title="Email"
+            value={formData.mail}
+          />
+          <div className="flex flex-col items-start w-full">
+            <div className="flex">
+              {messageIcon}
+              <span className="block ml-[8px] text-white">Message</span>
+            </div>
+            <textarea
+              onChange={handleChange}
+              name="text"
+              value={formData.text}
+              className="h-[242px] bg-[#d4ddf3] w-full my-2 p-2 rounded"
+            ></textarea>
           </div>
-          <textarea
-            name="Text1"
-            className="h-[242px] bg-[#d4ddf3] w-full my-2 p-2 rounded"
-          ></textarea>
-        </div>
-        <div
-          className={classNames(css(buttonStyle.button), "mt-[20px] self-end")}
-        >
-          Submit
-        </div>
-        {/* <ContactForm width='' height='h-[300px]' title='Message' /> */}
+          <button
+            type="submit"
+            className={classNames(
+              css(buttonStyle.button),
+              "mt-[20px] self-end"
+            )}
+          >
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );
-}
+};
 
 function ContactForm(props: any) {
   return (
@@ -81,11 +130,14 @@ function ContactForm(props: any) {
       </div>
       <input
         type="text"
+        name={props.name}
+        onChange={props.onChange}
         className={classNames(
           props.width,
           props.height,
           "bg-[#d4ddf3] my-2 p-2 text-start rounded"
         )}
+        value={props.value}
       />
     </div>
   );

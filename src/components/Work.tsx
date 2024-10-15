@@ -32,7 +32,7 @@ export function Work() {
   return (
     <div
       id="work"
-      className="flex flex-col justify-center w-full items-center py-[200px] bg-[#e9e9e9]"
+      className="flex flex-col justify-center w-full items-center py-[50px] bg-[#e9e9e9]"
     >
       <div>
         <span className={css(textStyle.yellow_title, textStyle.h2)}>02. </span>
@@ -57,19 +57,19 @@ export function Work() {
           </div>
           <div className="flex justify-end">
             <VisitButton
-              link="https://chat-bol.herokuapp.com"
+              link="https://develop--chat-chatear.netlify.app/"
               title="see project"
               onPressed={() => {}}
             />
           </div>
         </ProjectDescription>
         <img
-          className="mr-[100px] w-[300px] mr-[30px]"
+          className="ml-[30px] w-[300px] mr-[30px]"
           src={chatImage}
           alt=""
         />
       </div>
-      <div className="project-card flex lg:flex-row md:flex-row sm:flex-col-reverse  mb-[100px] bg-[white] p-[40px] items-center justify-center">
+      {/* <div className="project-card flex lg:flex-row md:flex-row sm:flex-col-reverse  mb-[100px] bg-[white] p-[40px] items-center justify-center">
         <ProjectDescription
           name={"Landing page"}
           description={`this Landig page is built with Gatsby which a static site generator and react framework, using css module for styling.`}
@@ -94,7 +94,7 @@ export function Work() {
           </div>
         </ProjectDescription>
         <img className="ml-[30px] w-[300px] mb-[20px]" src={saasImage} alt="" />
-      </div>
+      </div> */}
     </div>
   );
 }

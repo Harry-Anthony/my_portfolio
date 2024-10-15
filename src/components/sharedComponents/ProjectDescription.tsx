@@ -13,7 +13,7 @@ function ProjectDescription({
   children,
 }: ProjectProps) {
   return (
-    <div className="w-[400px] ">
+    <div className="pro-desc w-[400px] max-w-[400px]">
       <h5 className="text-[#ffaf23] text-[20px] my-[8px] border-b-[1px] border-black">
         {name}
       </h5>
