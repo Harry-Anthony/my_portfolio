@@ -6,11 +6,13 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="h-full">
+    <div className="flex flex-col h-full w-[100vw] items-center">
       <Header></Header>
-      <About></About>
-      <Work />
-      <Contact />
+      <div className="md:w-[906px] w-[100vw]">
+        <About></About>
+        <Work />
+        <Contact />
+      </div>
     </div>
   );
 }

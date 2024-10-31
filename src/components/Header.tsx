@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import MotionScroll from "./MotionScroll";
 export function Header() {
   return (
-    <div className="text-[#fff] bg-header pb-[200px] bg-cover">
+    <div className="text-[#fff] bg-header pb-[200px]">
       <img
         className="bg-img-header"
         src="https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
@@ -76,13 +76,6 @@ export function Header() {
           >
             <div className="overflow-hidden rounded-lg bg-[#252735] shadow-md ring-1 ring-black ring-opacity-5">
               <div className="flex items-center justify-between px-5 pt-4">
-                {/* <div>
-                                    <img
-                                        className="h-8 w-auto"
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                        alt=""
-                                    />
-                                </div> */}
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-[#252735] p-2 text-gray-400 hover:text-gray-500 focus:outline-none">
                     <span className="sr-only">Close main menu</span>
@@ -147,7 +140,7 @@ export function Header() {
             <p className={css(textStyle.paragraph, styles.p)}>
               I am a mobile and web application developer.
             </p>
-            <div className={css(buttonStyle.button, styles.button)}>
+            <div className={`${css(buttonStyle.button, styles.button)} hover:bg-[#E9BA6A57]`}>
               check out my course!
             </div>
           </div>
@@ -415,7 +408,7 @@ function ListGreyIcon() {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100vw",
+    
     // height: '500px',
     backgroundColor: "#252735",
     color: "white",
@@ -427,7 +420,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "space-between",
     boxShadow: "1px 2px 10px #242525",
-    width: "100vw",
+    
     position: "fixed",
   },
   nav: {
@@ -441,7 +434,7 @@ const styles = StyleSheet.create({
     color: "#ffaf23",
   },
   lgrett: {
-    width: "100vw",
+    
     padding: "8rem 25rem",
   },
   p: {

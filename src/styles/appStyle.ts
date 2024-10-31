@@ -22,7 +22,6 @@ export const buttonStyle = StyleSheet.create({
     borderRadius: "10px",
     padding: "1rem 1rem",
     color: "#E0920AFF",
-    background: "#FFAE232C",
     maxWidth: "max-content",
     cursor: 'pointer'
   },
