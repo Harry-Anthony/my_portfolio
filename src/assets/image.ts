@@ -8,5 +8,8 @@ export const images = {
     "css": require('./css.png'),
     "degree": require('./certificate.png'),
     "bgProject": require('./bg_project.jpg'),
-    "linkIcon": require('./link_icon.png')
+    "linkIcon": require('./link_icon.png'),
+    "house": require('./House_prices.jpg'),
+    "rock": require('./rock_classification.jpg'),
+    "transferL": require('./transferL.jpg')
 }

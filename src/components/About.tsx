@@ -1,14 +1,26 @@
 import { StyleSheet, css } from "aphrodite";
-import { textStyle } from "../styles/appStyle";
 import img from "./about_bg.png";
 import { images } from "../assets/image";
 import { Pagination, EffectFlip, Navigation } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/effect-flip';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
+import { SwiperSlide, Swiper, SwiperClass } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-flip";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import styles from "../assets/style/About.module.css";
+import { ReactComponent as Javascript } from "../assets/svg/javascript-1.svg";
+import { ReactComponent as Mongo } from "../assets/svg/mongodb-icon-2.svg";
+import { ReactComponent as Node } from "../assets/svg/nodejs-2.svg";
+import { ReactComponent as ReactNative } from "../assets/svg/react-native-1.svg";
+import { ReactComponent as Keras } from "../assets/svg/Keras.svg";
+import { ReactComponent as Pytorch } from "../assets/svg/pytorch-2.svg";
+import { ReactComponent as ScikitLearn } from "../assets/svg/scikit-learn.svg";
+import { ReactComponent as Python } from "../assets/svg/python-5.svg";
+import { ReactComponent as Tensorflow } from "../assets/svg/tensorflow-2.svg";
+import { ReactComponent as Left } from "../assets/svg/Left.svg";
+import { ReactComponent as Right } from "../assets/svg/Right.svg";
+import { useRef } from "react";
+import MotionScroll from "./MotionScroll";
 const ItemFormation = ({
   diplome,
   date,
@@ -21,26 +33,30 @@ const ItemFormation = ({
   lieu: string;
 }) => {
   return (
-    <div className="flex items-start bg-[#ffffff29] mx-[10px] sm:my-[10px] md:my-[10px] h-[300px]  max-w-[400px] px-[8px] py-[50px]">
-      <img className="w-[45px] mr-[10px]" src={images.degree} alt="" />
-      <div>
-        <h4 className="text-[#ffaf23] mb-[10px] text-[23px]">{diplome}</h4>
-        <h5 className="text-[#e1cc8acc] mb-[10px]">{school}</h5>
-        <span className="mb-[10px] text-[white]">{date}</span>
+    <a className="cursor-pointer" href="http://misa-madagascar.com/">
+      <div className="flex items-start bg-[#ffffff29] mx-[10px] sm:my-[15px] h-[350px] md:my-[15px] max-w-[400px] px-[20px] py-[50px]">
+        <img className="w-[45px] mr-[10px]" src={images.degree} alt="" />
         <div>
-          <a
-            href="http://misa-madagascar.com/"
-            className="text-[#8f94e3] text-[18px] mb-[10px]"
-          >
-            {lieu}
-          </a>
+          <h4 className="text-[#ffaf23] mb-[10px] text-[23px]">{diplome}</h4>
+          <h5 className="text-[#e1cc8acc] mb-[10px]">{school}</h5>
+          <span className="mb-[10px] text-[white]">{date}</span>
+          <div>
+            <a
+              href="http://misa-madagascar.com/"
+              className="text-[#8f94e3] text-[18px] mb-[10px]"
+            >
+              {lieu}
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
 export function About() {
+  const swiperRef = useRef<SwiperClass>();
+
   return (
     <div
       id="about"
@@ -48,129 +64,144 @@ export function About() {
     >
       <img className="about-bg" src={img} alt="" />
       <div className="flex flex-col items-center">
-        <div className="my-[50px] text-center mb-[50px]">
-          <span className={css(textStyle.yellow_title, textStyle.h2)}>
-            01.{" "}
+        <MotionScroll>
+          <div className="my-[50px] text-center mb-[50px]">
+            <span className={"text-[#ffaf23] text-[2rem]"}>01. </span>
+            <span className="text-[2rem]">About Me</span>
+            <p className="paragraphe">
+              My name is Harivola, I started developing web and mobile
+              applications since 2019. I like the challenge, I always look for
+              it to build my character and increase my skills.
+            </p>
+          </div>
+        </MotionScroll>
+        <MotionScroll duration={1.5} className="flex flex-col items-center">
+          <span className="text-[1.5rem] mb-[20px]">
+            <span className={css(aboutStyles.arrow_right)}>#</span>University
+            degrees
           </span>
-          <span className="text-[2rem]">About Me</span>
-          <p className="paragraphe">
-            My name is Harivola, I started developing web and mobile
-            applications since 2019. I like the challenge, I always look for it
-            to build my character and increase my skills.
+          <Swiper
+            loop={true}
+            onSwiper={(swiper: SwiperClass) => {
+              swiperRef.current = swiper;
+            }}
+            effect={"flip"}
+            // grabCursor={true}
+            pagination={true}
+            modules={[Pagination, EffectFlip, Navigation]}
+            className={styles.swiper}
+          >
+            <SwiperSlide className={styles.swiperslide}>
+              <ItemFormation
+                diplome={"LICENCE I and LICENCE II"}
+                date={"2017-2019"}
+                school={"Mathématiques et Informatique"}
+                lieu={"Université d'Antananarivo"}
+              />
+            </SwiperSlide>
+            <SwiperSlide className={styles.swiperslide}>
+              <ItemFormation
+                diplome={"LICENCE III"}
+                date={"2020-2021"}
+                school={"Mathématiques Informatique et Statistiques Appliquées"}
+                lieu={"MISA"}
+              />
+            </SwiperSlide>
+            <SwiperSlide className={styles.swiperslide}>
+              <ItemFormation
+                diplome={"MASTER I"}
+                date={"2021-2022"}
+                school={"Mathématiques Informatique et Statistiques Appliquées"}
+                lieu={"MISA"}
+              />
+            </SwiperSlide>
+            <SwiperSlide className={styles.swiperslide}>
+              <ItemFormation
+                diplome={"MASTER II"}
+                date={"2022-2023"}
+                school={"Mathématiques Informatique et Statistiques Appliquées"}
+                lieu={"MISA"}
+              />
+            </SwiperSlide>
+          </Swiper>
+          <div className="flex flex-row justify-between w-[100px] py-[10px] my-[20px]">
+            <div
+              className="cursor-pointer"
+              onClick={() => {
+                swiperRef.current?.slidePrev();
+              }}
+            >
+              <Left width={40} height={40} color="red" />
+            </div>
+            <div
+              className="cursor-pointer"
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              <Right width={40} height={40} />
+            </div>
+          </div>
+        </MotionScroll>
+        <MotionScroll className={"flex flex-col items-center"}>
+          <p className={"text-[20px] paragraphe text-center mb-[20px]"}>
+            <span className={css(aboutStyles.arrow_right)}>#</span>
+            Here are a few technologies I’ve been working with recently:
           </p>
-        </div>
-        <span className={css(textStyle.h2)}>University degrees</span>
-        <Swiper
-          navigation={true}
-          effect={"flip"}
-          grabCursor={true}
-          pagination={true}
-          modules={[Pagination, EffectFlip, Navigation]}
-          className="mySwiper my-[20px]"
-        >
-          <SwiperSlide className="w-[400px] max-h-[400px]">
-            <ItemFormation
-              diplome={"LICENCE I and LICENCE II"}
-              date={"2017-2019"}
-              school={"Mathématiques et Informatique"}
-              lieu={"Université d'Antananarivo"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-[400px] max-h-[400px]">
-            <ItemFormation
-              diplome={"LICENCE III"}
-              date={"2020-2021"}
-              school={"Mathématiques Informatique et Statistiques Appliquées"}
-              lieu={"MISA"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-[400px] max-h-[400px]">
-            <ItemFormation
-              diplome={"MASTER I"}
-              date={"2021-2022"}
-              school={"Mathématiques Informatique et Statistiques Appliquées"}
-              lieu={"MISA"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-[400px] max-h-[400px]">
-            <ItemFormation
-              diplome={"MASTER II"}
-              date={"2022-2023"}
-              school={"Mathématiques Informatique et Statistiques Appliquées"}
-              lieu={"MISA"}
-            />
-          </SwiperSlide>
-        </Swiper>
-        {/* <div className="flex my-[50px] md:flex-row lg:flex-row sm:flex-col">
-          <ItemFormation
-            diplome={"LICENCE II"}
-            date={"2019-2020"}
-            school={"Mathématiques et Informatique"}
-            lieu={"Université d'Antananarivo"}
-          />
-          <ItemFormation
-            diplome={"LICENCE III"}
-            date={"2020-2021"}
-            school={"Mathématiques Informatique et Statistiques Appliquées"}
-            lieu={"Université d'Antananarivo"}
-          />
-          <ItemFormation
-            diplome={"MASTER I"}
-            date={"2021-2022"}
-            school={"Mathématiques Informatique et Statistiques Appliquées"}
-            lieu={"Université d'Antananarivo"}
-          />
-        </div> */}
-        <p className={"text-[20px] paragraphe text-center mb-[20px]"}>
-          Here are a few technologies I’ve been working with recently:
-        </p>
-        <div className={css(aboutStyles.techno_container)}>
-          <ul>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> Javascript
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> React
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> Node.js
-            </li>
-          </ul>
-          <ul>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> MongoDB
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> Dart
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> Flutter
-            </li>
-          </ul>
-          <ul>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> React
-              Native
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> Python
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> sklearn
-            </li>
-          </ul>
-          <ul>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> TensorFlow
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> Keras
-            </li>
-            <li className={css(aboutStyles.li)}>
-              <span className={css(aboutStyles.arrow_right)}>#</span> Pytorch
-            </li>
-          </ul>
-        </div>
+          <div className={css(aboutStyles.techno_container)}>
+            <ul>
+              <li className={css(aboutStyles.li)}>
+                <Javascript
+                  width={80}
+                  height={80}
+                  className="mx-[5px] my-[15px]"
+                />
+              </li>
+              <li className={css(aboutStyles.li)}>
+                <Node width={80} height={80} className="mx-[5px] my-[15px]" />
+              </li>
+              <li className={css(aboutStyles.li)}>
+                <Mongo width={80} height={80} className="mx-[5px] my-[15px]" />
+              </li>
+            </ul>
+            <ul>
+              <li className={css(aboutStyles.li)}>
+                <ReactNative
+                  width={80}
+                  height={80}
+                  className="mx-[5px] my-[15px]"
+                />
+              </li>
+              <li className={css(aboutStyles.li)}>
+                <Python width={80} height={80} className="mx-[5px] my-[15px]" />
+              </li>
+              <li className={css(aboutStyles.li)}>
+                <ScikitLearn
+                  width={80}
+                  height={80}
+                  className="mx-[5px] my-[15px]"
+                />
+              </li>
+            </ul>
+            <ul>
+              <li className={css(aboutStyles.li)}>
+                <Tensorflow
+                  width={80}
+                  height={80}
+                  className="mx-[5px] my-[15px]"
+                />
+              </li>
+              <li className={css(aboutStyles.li)}>
+                <Keras width={80} height={80} className="mx-[5px] my-[15px]" />
+              </li>
+              <li className={css(aboutStyles.li)}>
+                <Pytorch
+                  width={80}
+                  height={80}
+                  className="mx-[5px] my-[15px]"
+                />
+              </li>
+            </ul>
+          </div>
+        </MotionScroll>
       </div>
       {/* <img className={css(aboutStyles.img)} src={harivola} alt="" /> */}
     </div>

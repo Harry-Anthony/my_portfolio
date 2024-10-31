@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import MotionScroll from "./MotionScroll";
 export function Header() {
   return (
     <div className="text-[#fff] bg-header pb-[200px] bg-cover">
@@ -126,30 +127,32 @@ export function Header() {
           </Popover.Panel>
         </Transition>
       </Popover>
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ type: "spring", duration: 2, bounce: 0.3 }}
-        className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
-      >
-        <div className="lg:text-left">
-          <span className={css(textStyle.yellow_title)}>Hi, my name is</span>
-          <h1 className="text-4xl tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            <span className="title block text-[#6c591f85] t-shadow">
-              Harivola
-            </span>
-            <span className="title block text-[#6c591f85] t-shadow">
-              RANDRIAMIHAJA
-            </span>
-          </h1>
-          <p className={css(textStyle.paragraph, styles.p)}>
-            I am a mobile and web application developer.
-          </p>
-          <div className={css(buttonStyle.button, styles.button)}>
-            check out my course!
+      <MotionScroll duration={1.5}>
+        <motion.main
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "spring", duration: 2, bounce: 0.3 }}
+          className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+        >
+          <div className="lg:text-left">
+            <span className={css(textStyle.yellow_title)}>Hi, my name is</span>
+            <h1 className="text-4xl tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              <span className="title block text-[#6c591f85] t-shadow">
+                Harivola
+              </span>
+              <span className="title block text-[#6c591f85] t-shadow">
+                RANDRIAMIHAJA
+              </span>
+            </h1>
+            <p className={css(textStyle.paragraph, styles.p)}>
+              I am a mobile and web application developer.
+            </p>
+            <div className={css(buttonStyle.button, styles.button)}>
+              check out my course!
+            </div>
           </div>
-        </div>
-      </motion.main>
+        </motion.main>
+      </MotionScroll>
       <div className="area">
         <ListGreyIcon />
         {/* <ListColorIcon /> */}
@@ -435,7 +438,7 @@ const styles = StyleSheet.create({
     display: "block",
   },
   link_number: {
-    color: "#252735",
+    color: "#ffaf23",
   },
   lgrett: {
     width: "100vw",

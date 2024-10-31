@@ -1,8 +1,9 @@
 import { css } from "aphrodite";
 import classNames from "classnames";
-import { buttonStyle, textStyle } from "../styles/appStyle";
-import { useCallback, useState } from "react";
+import { buttonStyle } from "../styles/appStyle";
+import { useState } from "react";
 import axios from "axios";
+import MotionScroll from "./MotionScroll";
 const initialState = {
   name: "",
   mail: "",
@@ -12,7 +13,10 @@ export const Contact = () => {
   const [formData, setFormData] = useState<any>(initialState);
   const sendMail = async () => {
     try {
-      await axios.post("https://chat-back-2928.onrender.com/chat-harivola/mail", formData);
+      await axios.post(
+        "https://chat-back-2928.onrender.com/chat-harivola/mail",
+        formData
+      );
       setFormData(initialState);
     } catch (error) {
       alert("unable to send message");
@@ -71,52 +75,54 @@ export const Contact = () => {
       className="flex flex-col w-full items-center py-[100px] bg-[#252735]"
     >
       <div>
-        <span className={css(textStyle.yellow_title, textStyle.h2)}>03. </span>
+        <span className={"text-[#ffaf23] text-[2rem]"}>03. </span>
         <span className="text-4xl text-white">Contact</span>
       </div>
-      <div className="form lg:w-[500px] sm:w-[350px] flex flex-col mt-[20px]">
-        <form onSubmit={handleSubmit}>
-          <ContactForm
-            onChange={handleChange}
-            name="name"
-            icon={userIcon}
-            width="w-full"
-            height=""
-            title="Name"
-            value={formData.name}
-          />
-          <ContactForm
-            onChange={handleChange}
-            name="mail"
-            icon={mailIcon}
-            width="w-full"
-            height=""
-            title="Email"
-            value={formData.mail}
-          />
-          <div className="flex flex-col items-start w-full">
-            <div className="flex">
-              {messageIcon}
-              <span className="block ml-[8px] text-white">Message</span>
-            </div>
-            <textarea
+      <MotionScroll>
+        <div className="form lg:w-[500px] sm:w-[350px] flex flex-col mt-[20px]">
+          <form onSubmit={handleSubmit}>
+            <ContactForm
               onChange={handleChange}
-              name="text"
-              value={formData.text}
-              className="h-[242px] bg-[#d4ddf3] w-full my-2 p-2 rounded"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className={classNames(
-              css(buttonStyle.button),
-              "mt-[20px] self-end"
-            )}
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+              name="name"
+              icon={userIcon}
+              width="w-full"
+              height=""
+              title="Name"
+              value={formData.name}
+            />
+            <ContactForm
+              onChange={handleChange}
+              name="mail"
+              icon={mailIcon}
+              width="w-full"
+              height=""
+              title="Email"
+              value={formData.mail}
+            />
+            <div className="flex flex-col items-start w-full">
+              <div className="flex">
+                {messageIcon}
+                <span className="block ml-[8px] text-white">Message</span>
+              </div>
+              <textarea
+                onChange={handleChange}
+                name="text"
+                value={formData.text}
+                className="h-[242px] bg-[#d4ddf3] w-full my-2 p-2 rounded"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className={classNames(
+                css(buttonStyle.button),
+                "mt-[20px] self-end"
+              )}
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </MotionScroll>
     </div>
   );
 };
