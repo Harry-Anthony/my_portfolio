@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/my_portfolio/static/css/main.32502221.css",
+    "main.js": "/my_portfolio/static/js/main.5f4c1bc9.js",
+    "static/js/453.1407b060.chunk.js": "/my_portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/about_bg.png": "/my_portfolio/static/media/about_bg.5fcae24d2a7d3b9f775f.png",
+    "static/media/rock_classification.jpg": "/my_portfolio/static/media/rock_classification.6c9a93e802404967b54a.jpg",
+    "static/media/transferL.jpg": "/my_portfolio/static/media/transferL.12851108ab0e83cdea67.jpg",
+    "static/media/bg_project.jpg": "/my_portfolio/static/media/bg_project.82d3c1785ca8ddb94202.jpg",
+    "static/media/House_prices.jpg": "/my_portfolio/static/media/House_prices.edb7d7d076d4ed6accad.jpg",
+    "static/media/chat.png": "/my_portfolio/static/media/chat.d7de0a5c49a1bdef40cb.png",
+    "static/media/matplotlib-1.svg": "/my_portfolio/static/media/matplotlib-1.92136fd83df89b79cd25f516a96c97ba.svg",
+    "static/media/certificate.png": "/my_portfolio/static/media/certificate.15c68c9b8d8364a129b1.png",
+    "static/media/css.png": "/my_portfolio/static/media/css.02d225c7df0b28341d8d.png",
+    "static/media/socket_io.png": "/my_portfolio/static/media/socket_io.ecc0357f49510f1473bc.png",
+    "static/media/seaborn-1.svg": "/my_portfolio/static/media/seaborn-1.653bbba50db2d3973db2dac018071602.svg",
+    "static/media/mongodb-icon-2.svg": "/my_portfolio/static/media/mongodb-icon-2.71878b738f870a417c999759fb2368a8.svg",
+    "static/media/react-native-1.svg": "/my_portfolio/static/media/react-native-1.55360266b3781dae00a5a77c8916f82d.svg",
+    "static/media/scikit-learn.svg": "/my_portfolio/static/media/scikit-learn.92d76f9c7b0e339fbecc4654928e1360.svg",
+    "static/media/pytorch-2.svg": "/my_portfolio/static/media/pytorch-2.1a0bfdbe4e348829ef1f08bfa3373922.svg",
+    "static/media/nodejs-2.svg": "/my_portfolio/static/media/nodejs-2.38d424a0fa8071e904b1b9fb12a23df3.svg",
+    "static/media/python-5.svg": "/my_portfolio/static/media/python-5.e6d7dc739a91892bbf1f6262412046dd.svg",
+    "static/media/OpenCV.svg": "/my_portfolio/static/media/OpenCV.5269993c5f90a26581f54d5a9dde13fd.svg",
+    "static/media/numpy-1.svg": "/my_portfolio/static/media/numpy-1.208e250c6332c7bd55413a95080d228f.svg",
+    "index.html": "/my_portfolio/index.html",
+    "static/media/tensorflow-2.svg": "/my_portfolio/static/media/tensorflow-2.84a4db00a79641b19fa7e3873b0f457b.svg",
+    "static/media/Keras.svg": "/my_portfolio/static/media/Keras.8f4d0f43565d467c187b4eccfe878cea.svg",
+    "static/media/javascript-1.svg": "/my_portfolio/static/media/javascript-1.b879f838faf1cb951d1c2230fd933a39.svg",
+    "static/media/pandas.svg": "/my_portfolio/static/media/pandas.b6ed8692593d49a0abce10c2a7772ed1.svg",
+    "static/media/Left.svg": "/my_portfolio/static/media/Left.2b94116bc8275b419f7c8bfd050a114b.svg",
+    "static/media/Right.svg": "/my_portfolio/static/media/Right.44b67631db18ac3d609f99e03a0868e8.svg",
+    "main.32502221.css.map": "/my_portfolio/static/css/main.32502221.css.map",
+    "main.5f4c1bc9.js.map": "/my_portfolio/static/js/main.5f4c1bc9.js.map",
+    "453.1407b060.chunk.js.map": "/my_portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32502221.css",
+    "static/js/main.5f4c1bc9.js"
+  ]
+}
