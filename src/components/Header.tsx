@@ -5,7 +5,17 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import MotionScroll from "./MotionScroll";
+import cv from '../assets/harivola_cv.pdf'
 export function Header() {
+
+  const onButtonClick = () => {
+    const link = document.createElement("a");
+    link.href = cv;
+    link.download = "cv_harivola.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
   return (
     <div className="text-[#fff] bg-header pb-[200px]">
       <img
@@ -140,9 +150,17 @@ export function Header() {
             <p className={css(textStyle.paragraph, styles.p)}>
               I am a mobile and web application developer.
             </p>
-            <div className={`${css(buttonStyle.button, styles.button)} hover:bg-[#E9BA6A57]`}>
-              check out my course!
-            </div>
+            {/* <a href={"../assets/harivola_cv.pdf"} download={'test.pdf'}> */}
+              <div
+                className={`${css(
+                  buttonStyle.button,
+                  styles.button
+                )} hover:bg-[#E9BA6A57]`}
+                onClick={onButtonClick}
+              >
+                check out my course!
+              </div>
+            {/* </a> */}
           </div>
         </motion.main>
       </MotionScroll>
@@ -408,7 +426,6 @@ function ListGreyIcon() {
 
 const styles = StyleSheet.create({
   container: {
-    
     // height: '500px',
     backgroundColor: "#252735",
     color: "white",
@@ -420,7 +437,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "space-between",
     boxShadow: "1px 2px 10px #242525",
-    
+
     position: "fixed",
   },
   nav: {
@@ -434,7 +451,6 @@ const styles = StyleSheet.create({
     color: "#ffaf23",
   },
   lgrett: {
-    
     padding: "8rem 25rem",
   },
   p: {
