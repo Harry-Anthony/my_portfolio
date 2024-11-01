@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/my_portfolio/static/css/main.e7e7c223.css",
-    "main.js": "/my_portfolio/static/js/main.cafee3fd.js",
+    "main.js": "/my_portfolio/static/js/main.3b5ef087.js",
     "static/js/453.1407b060.chunk.js": "/my_portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/harivola_cv.pdf": "/my_portfolio/static/media/harivola_cv.b16d404f4cebb9fa68e7.pdf",
     "static/media/about_bg.png": "/my_portfolio/static/media/about_bg.5fcae24d2a7d3b9f775f.png",
     "static/media/rock_classification.jpg": "/my_portfolio/static/media/rock_classification.6c9a93e802404967b54a.jpg",
     "static/media/transferL.jpg": "/my_portfolio/static/media/transferL.12851108ab0e83cdea67.jpg",
@@ -17,11 +18,13 @@
     "static/media/mongodb-icon-2.svg": "/my_portfolio/static/media/mongodb-icon-2.71878b738f870a417c999759fb2368a8.svg",
     "static/media/react-native-1.svg": "/my_portfolio/static/media/react-native-1.55360266b3781dae00a5a77c8916f82d.svg",
     "static/media/scikit-learn.svg": "/my_portfolio/static/media/scikit-learn.92d76f9c7b0e339fbecc4654928e1360.svg",
+    "static/media/github-icon-1.svg": "/my_portfolio/static/media/github-icon-1.4c2c53e740eb7f67da4150e72f744388.svg",
     "static/media/pytorch-2.svg": "/my_portfolio/static/media/pytorch-2.1a0bfdbe4e348829ef1f08bfa3373922.svg",
     "static/media/nodejs-2.svg": "/my_portfolio/static/media/nodejs-2.38d424a0fa8071e904b1b9fb12a23df3.svg",
     "static/media/python-5.svg": "/my_portfolio/static/media/python-5.e6d7dc739a91892bbf1f6262412046dd.svg",
     "static/media/OpenCV.svg": "/my_portfolio/static/media/OpenCV.5269993c5f90a26581f54d5a9dde13fd.svg",
     "static/media/numpy-1.svg": "/my_portfolio/static/media/numpy-1.208e250c6332c7bd55413a95080d228f.svg",
+    "static/media/linkedin-icon-2.svg": "/my_portfolio/static/media/linkedin-icon-2.b48e50882619781b627031b32fa03dd7.svg",
     "index.html": "/my_portfolio/index.html",
     "static/media/tensorflow-2.svg": "/my_portfolio/static/media/tensorflow-2.84a4db00a79641b19fa7e3873b0f457b.svg",
     "static/media/Keras.svg": "/my_portfolio/static/media/Keras.8f4d0f43565d467c187b4eccfe878cea.svg",
@@ -30,11 +33,11 @@
     "static/media/Left.svg": "/my_portfolio/static/media/Left.2b94116bc8275b419f7c8bfd050a114b.svg",
     "static/media/Right.svg": "/my_portfolio/static/media/Right.44b67631db18ac3d609f99e03a0868e8.svg",
     "main.e7e7c223.css.map": "/my_portfolio/static/css/main.e7e7c223.css.map",
-    "main.cafee3fd.js.map": "/my_portfolio/static/js/main.cafee3fd.js.map",
+    "main.3b5ef087.js.map": "/my_portfolio/static/js/main.3b5ef087.js.map",
     "453.1407b060.chunk.js.map": "/my_portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7e7c223.css",
-    "static/js/main.cafee3fd.js"
+    "static/js/main.3b5ef087.js"
   ]
 }
