@@ -5,9 +5,15 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import MotionScroll from "./MotionScroll";
-import cv from '../assets/harivola_cv.pdf'
-export function Header() {
+import cv from "../assets/harivola_cv.pdf";
+import { ReactComponent as Github } from "../assets/svg/github-icon-1.svg";
+import { ReactComponent as LinkedIn } from "../assets/svg/linkedin-icon-2.svg";
 
+const IconLink = ({ icon, link }: any) => {
+  return <a href={link}>{icon}</a>;
+};
+
+export function Header() {
   const onButtonClick = () => {
     const link = document.createElement("a");
     link.href = cv;
@@ -15,7 +21,7 @@ export function Header() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-};
+  };
   return (
     <div className="text-[#fff] bg-header pb-[200px]">
       <img
@@ -150,17 +156,34 @@ export function Header() {
             <p className={css(textStyle.paragraph, styles.p)}>
               I am a mobile and web application developer.
             </p>
-            {/* <a href={"../assets/harivola_cv.pdf"} download={'test.pdf'}> */}
-              <div
-                className={`${css(
-                  buttonStyle.button,
-                  styles.button
-                )} hover:bg-[#E9BA6A57]`}
-                onClick={onButtonClick}
-              >
-                check out my course!
-              </div>
-            {/* </a> */}
+            <div
+              className={`${css(
+                buttonStyle.button,
+                styles.button
+              )} hover:bg-[#E9BA6A57]`}
+              onClick={onButtonClick}
+            >
+              check out my course!
+            </div>
+            <div className="flex mt-[20px]">
+              <IconLink
+                icon={
+                  <Github
+                    width={30}
+                    height={30}
+                    className="mr-[10px]"
+                    color="#E0920AFF"
+                  />
+                }
+                link={"https://github.com/Harry-Anthony"}
+              />
+              <IconLink
+                icon={<LinkedIn width={30} height={30} color="#E0920AFF" />}
+                link={
+                  "https://www.linkedin.com/in/harivola-randriamihaja-432373222/"
+                }
+              />
+            </div>
           </div>
         </motion.main>
       </MotionScroll>
