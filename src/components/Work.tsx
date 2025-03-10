@@ -98,13 +98,7 @@ export function Work() {
         <span className={"text-[#ffaf23] text-[2rem]"}>02. </span>
         <span className="text-4xl text-black">My Project</span>
       </div>
-      <MotionScroll
-        duration={1}
-        variant={{
-          visible: { x: 1, opacity: 1, scale: 1, transition: { duration: 1 } },
-          hidden: { opacity: 0, scale: 1, x: "-100%" },
-        }}
-      >
+      <MotionScroll duration={1}>
         <Swiper
           loop
           pagination={true}
