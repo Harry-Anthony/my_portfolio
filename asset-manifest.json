@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my_portfolio/static/css/main.e7e7c223.css",
-    "main.js": "/my_portfolio/static/js/main.7e7ca697.js",
+    "main.js": "/my_portfolio/static/js/main.d004fa01.js",
     "static/js/453.1407b060.chunk.js": "/my_portfolio/static/js/453.1407b060.chunk.js",
     "static/media/harivola_cv.pdf": "/my_portfolio/static/media/harivola_cv.b16d404f4cebb9fa68e7.pdf",
     "static/media/about_bg.png": "/my_portfolio/static/media/about_bg.5fcae24d2a7d3b9f775f.png",
@@ -33,11 +33,11 @@
     "static/media/Left.svg": "/my_portfolio/static/media/Left.2b94116bc8275b419f7c8bfd050a114b.svg",
     "static/media/Right.svg": "/my_portfolio/static/media/Right.44b67631db18ac3d609f99e03a0868e8.svg",
     "main.e7e7c223.css.map": "/my_portfolio/static/css/main.e7e7c223.css.map",
-    "main.7e7ca697.js.map": "/my_portfolio/static/js/main.7e7ca697.js.map",
+    "main.d004fa01.js.map": "/my_portfolio/static/js/main.d004fa01.js.map",
     "453.1407b060.chunk.js.map": "/my_portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7e7c223.css",
-    "static/js/main.7e7ca697.js"
+    "static/js/main.d004fa01.js"
   ]
 }
