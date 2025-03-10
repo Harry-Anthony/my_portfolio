@@ -1,10 +1,10 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-const MotionScroll = ({ children, className, duration }: any) => {
-  const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: duration || 1.8 } },
-    hidden: { opacity: 0, scale: 1 },
+const MotionScroll = ({ children, className, duration, variant }: any) => {
+  const boxVariant = variant || {
+    visible: { y: 1, opacity: 1, scale: 1, transition: { duration: duration || 1.8 } },
+    hidden: { opacity: 0, scale: 1, y: -200 },
   };
   const control = useAnimation();
   const ref = useRef(null);

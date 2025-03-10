@@ -78,7 +78,12 @@ export const Contact = () => {
         <span className={"text-[#ffaf23] text-[2rem]"}>03. </span>
         <span className="text-4xl text-white">Contact</span>
       </div>
-      <MotionScroll>
+      <MotionScroll
+        variant={{
+          visible: { x: 1, opacity: 1, scale: 1, transition: { duration: 1 } },
+          hidden: { opacity: 0, scale: 1, x: -200 },
+        }}
+      >
         <div className="form lg:w-[500px] sm:w-[350px] flex flex-col mt-[20px]">
           <form onSubmit={handleSubmit}>
             <ContactForm
