@@ -24,20 +24,20 @@ const project_container: string =
   "project-card flex lg:flex-row md:flex-row sm:flex-col-reverse my-[100px] bg-[white] p-[40px] items-center justify-center";
 
 const wordData = [
-  {
-    name: "Chat Application",
-    description:
-      "Here is a Messenger application that I build with react for the front part and nodejs, express socket-io for the api. The user can create an account, arriving on the home page he can search for one to start a discussion. All messages are stored on the database, and there is a paging system to retrieve old messages",
-    link: "https://develop--chat-chatear.netlify.app/",
-    image: chatImage,
-    technologies: [
-      images.react,
-      images.mongodb,
-      images.node,
-      images.socketIO,
-      images.redux,
-    ],
-  },
+  // {
+  //   name: "Chat Application",
+  //   description:
+  //     "Here is a Messenger application that I build with react for the front part and nodejs, express socket-io for the api. The user can create an account, arriving on the home page he can search for one to start a discussion. All messages are stored on the database, and there is a paging system to retrieve old messages",
+  //   link: "https://develop--chat-chatear.netlify.app/",
+  //   image: chatImage,
+  //   technologies: [
+  //     images.react,
+  //     images.mongodb,
+  //     images.node,
+  //     images.socketIO,
+  //     images.redux,
+  //   ],
+  // },
   {
     name: "House prices prediction",
     description:
