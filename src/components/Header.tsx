@@ -154,13 +154,10 @@ export function Header() {
               </span>
             </h1>
             <p className={css(textStyle.paragraph, styles.p)}>
-              I am a mobile and web application developer with a strong focus on
-              creating intuitive, user-friendly applications. My expertise spans
-              across building cross-platform mobile apps(iOS, android), responsive web apps,
-              and integrating advanced technologies. Additionally, I have
-              experience in computer vision, utilizing image processing
-              techniques and machine learning models to develop solutions that
-              enable applications to interpret and interact with visual data.
+              Passionate about data science, 
+              I focus on transforming raw data into actionable insights through analysis, 
+              modeling, and visualization. With a strong analytical mindset and a commitment to delivering value, 
+              I enjoy turning complex data into meaningful solutions that support decision-making and innovation.
             </p>
             <div
               className={`${css(
